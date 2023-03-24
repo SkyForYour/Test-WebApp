@@ -1,9 +1,11 @@
 import streamlit as st
-from streamlit_toggle import st_toggle_switch
+from PIL import Image
+# from streamlit_toggle import st_toggle_switch
 
 def App():
 
-    st.image('images\logo_edit.png', use_column_width=True)
+    logo = Image.open("images/logo_edit.png")
+    st.image(logo, use_column_width=True)
 
     if st.session_state['language'] == 0:
         
