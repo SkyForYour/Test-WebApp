@@ -54,8 +54,6 @@ def get_img_as_base64(file):
 # img4 = get_img_as_base64("images\d4.jpg")
 # img5 = get_img_as_base64("images\d5.jpg")
 
-
-
 # --------------------> Sidebar
 with st.sidebar:
     sidebar.App()
