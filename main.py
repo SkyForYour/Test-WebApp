@@ -43,6 +43,7 @@ st.session_state['language'] = st_toggle_switch(
 logo = Image.open("images/logo_edit.png")
 st.image(logo, use_column_width=True)
 
+st.image("images/logo_edit.png")
 
 # -----> Image : HTML To Streamlit
 def get_img_as_base64(file):
