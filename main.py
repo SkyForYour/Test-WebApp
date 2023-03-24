@@ -25,9 +25,11 @@ st.set_page_config(
 
 # -----> Global Variable
 if 'language' not in st.session_state: 
-    st.session_state['language'] = None
+    st.session_state['language'] = 0
 if 'index_page' not in st.session_state: 
     st.session_state['index_page'] = 0
+if 'trip' not in st.session_state: 
+    st.session_state['trip'] = None
 
 # ----------> Thai / English
 st.session_state['language'] = st_toggle_switch(
