@@ -55,7 +55,6 @@ def get_img_as_base64(file):
 # img5 = get_img_as_base64("images\d5.jpg")
 
 img_1 = Image.open("images/logo_edit_1.png")
-st.image(img_1, use_column_width=True)
 img_2 = Image.open("images/logo_edit_2.png")
 img_3 = Image.open("images/logo_edit_3.png")
 img_4 = Image.open("images/logo_edit_4.png")
@@ -166,19 +165,22 @@ if st.session_state['index_page'] == 0:
     # """
     # components.html(html, height=800, scrolling=False)
 
+    logo = Image.open("images/logo_edit.png")
+    st.image(logo, use_column_width=True)
+
 
 elif st.session_state['index_page']== 1:
 
     img = image_select(
     label="",
     images=[
-        "images\logo_edit_1.png",
-        "images\logo_edit_2.png",
-        "images\logo_edit_3.png",
-        "images\logo_edit_4.png",
-        "images\logo_edit_5.png",
-        "images\logo_edit_6.png",
-        "images\logo_edit_7.png",
+        "images/logo_edit_1.png",
+        "images/logo_edit_2.png",
+        "images/logo_edit_3.png",
+        "images/logo_edit_4.png",
+        "images/logo_edit_5.png",
+        "images/logo_edit_6.png",
+        "images/logo_edit_7.png",
     ],
     captions=["ท่าเรือบ้านเชี่ยวหลาน", "จุดชมวิวเขื่อนรัชชประภา", "สะพานแขวน ภูเขารูปหัวใจ", 
               "วัดไกรสรเขตราราม", "ลานพระแท่น ภปร.สก.", "ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน", 
@@ -186,37 +188,37 @@ elif st.session_state['index_page']== 1:
             use_container_width=True, index=0
     )
 
-    if img == "images\logo_edit_1.png":
+    if img == "images/logo_edit_1.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
       
-    elif img == "images\logo_edit_2.png":
+    elif img == "images/logo_edit_2.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
 
-    elif img == "images\logo_edit_3.png":
+    elif img == "images/logo_edit_3.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
 
-    elif img == "images\logo_edit_4.png":
+    elif img == "images/logo_edit_4.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
 
-    elif img == "images\logo_edit_5.png":
+    elif img == "images/logo_edit_5.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
        
-    elif img == "images\logo_edit_6.png":
+    elif img == "images/logo_edit_6.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
     
-    elif img == "images\logo_edit_7.png":
+    elif img == "images/logo_edit_7.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
