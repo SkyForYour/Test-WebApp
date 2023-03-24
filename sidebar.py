@@ -8,6 +8,8 @@ def App():
     logo = Image.open("images/logo_edit.png")
     st.image(logo, use_column_width=True)
     
+    st.image("images/logo_edit.png")
+    
     if st.session_state['language'] == 0:
         
         st.markdown("## ⠀⠀:green[ยินดีต้อนรับสู่บ้านเชี่ยวหลาน]⠀⠀")
