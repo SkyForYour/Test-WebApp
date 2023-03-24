@@ -1,4 +1,4 @@
---upgrade
+pip install upgrade-pip
 
 streamlit
 streamlit-toggle-switch
