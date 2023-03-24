@@ -1,12 +1,10 @@
 import streamlit as st
-
+from streamlit_toggle import st_toggle_switch
 
 def App():
-    
 
-    
-    st.image("images/logo_edit.png")
-    
+    st.image('images\logo_edit.png', use_column_width=True)
+
     if st.session_state['language'] == 0:
         
         st.markdown("## ⠀⠀:green[ยินดีต้อนรับสู่บ้านเชี่ยวหลาน]⠀⠀")
@@ -24,7 +22,7 @@ def App():
         color: #454545;
         cursor: pointer;
         display: inline-block;
-        padding: 15px 21.05%;
+        padding: 15px 10%;
         text-align: center;
         transition: all 250ms;
         border: 1;
@@ -43,14 +41,20 @@ def App():
         }
         </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
-
-        if st.button("**⠀ชุมชนบ้านเชียวหลาน⠀**"):
+        
+        if st.button("**⠀⠀⠀⠀⠀⠀⠀⠀⠀ ชุมชน ⠀⠀⠀⠀⠀⠀⠀⠀⠀**"):
             st.session_state['index_page'] = 0
-        if st.button("**แนะนำแหล่งท่องเที่ยวบ้านเชี่ยวหลาน**"):
+        if st.button("**⠀ ⠀ ⠀ แนะนำแหล่งท่องเที่ยว** ⠀ ⠀ ⠀"):
             st.session_state['index_page'] = 1
-        if st.button("**โปรแกรมการท่องเที่ยวบ้านเชี่ยวหลาน**"):
+        if st.button("**⠀ ⠀ ⠀โปรแกรมการท่องเที่ยว⠀ ⠀ ⠀**"):
             st.session_state['index_page'] = 2
-    
+
+        if st.session_state['index_page'] == 2:
+            st.write('')
+            st.session_state['trip'] = st.selectbox(
+            ' 🚍⠀เลือกทริปการท่องเที่ยว',
+            ('1 วันไปกลับ', '2 วัน 1 คืน', "3 วัน 2 คืน", 'อื่น ๆ⠀.⠀.'))
+            
     elif st.session_state['language'] == 1:
 
         st.markdown("## ⠀⠀:green[Welcome to Baan Cheow Lan]⠀⠀")    
@@ -88,12 +92,29 @@ def App():
         </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
 
-        if st.button("**⠀Ban Chiew Lan Community⠀**"):
+        if st.button("**⠀⠀⠀ ⠀ ⠀ Community ⠀ ⠀ ⠀⠀⠀**"):
             st.session_state['index_page'] = 0
-        if st.button("**Introducing Ban Chiew Lan tourist attractions**"):
+        if st.button("**⠀Recommended attractions⠀**"):
             st.session_state['index_page'] = 1
-        if st.button("**Ban Chiew Lan Travel Program**"):
+        if st.button("**⠀⠀⠀ ⠀ Travel Program ⠀ ⠀⠀⠀**"):
             st.session_state['index_page'] = 2
-
+        
+        if st.session_state['index_page'] == 2:
+            st.write('')
+            st.session_state['trip'] = st.selectbox(
+            ' 🚍⠀Choose a trip',
+            ('1 day round trip', '2 days 1 night', "3 days 2 nights", 'Other⠀.⠀.'))
+            
     st.write(''), st.write('')
-    st.caption("### \- :green[**Streamlit 🌏 ⠀**]")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.caption("### \- :green[**Streamlit 🌏 ⠀**]")
+
+    # with col2:
+    #     st.session_state['language'] = st_toggle_switch(
+    #         label="𝐓𝐇𝐀𝐈 / 𝐄𝐍𝐆", key="switch_1",
+    #         default_value=False, label_after=False,
+    #         inactive_color="#D3D3D3",  # optional
+    #         active_color="#11567f",  # optional
+    #         track_color="#29B5E8",  # optional
+    #     )
