@@ -1,12 +1,9 @@
 import streamlit as st
 
-from PIL import Image 
-from io import BytesIO
 
 def App():
     
-    logo = Image.open("images/logo_edit.png")
-    st.image(logo, use_column_width=True)
+
     
     st.image("images/logo_edit.png")
     
