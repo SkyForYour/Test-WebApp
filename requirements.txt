@@ -1,0 +1,8 @@
+streamlit
+streamlit-image-comparison
+streamlit-toggle-switch
+streamlit-image-select
+opencv-python
+pillow
+Image
+
