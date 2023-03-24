@@ -7,4 +7,3 @@ streamlit_folium
 opencv-python
 pillow
 Image
-BytesIO
