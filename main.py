@@ -160,9 +160,6 @@ if st.session_state['index_page'] == 0:
 
 elif st.session_state['index_page']== 1:
     
-    Image.open("images/")
-    
-    
     img = image_select(
     label="",
     images=[
@@ -183,86 +180,37 @@ elif st.session_state['index_page']== 1:
     if img == "images\logo_edit_1.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-
-        col1, col2 = st.columns([2.04,1])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-
-        col1, col2 = st.columns([1,1.18])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-    
+        st.warning("⚠️⠀:orange[Coming soon]")
+      
     elif img == "images\logo_edit_2.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
+        st.warning("⚠️⠀:orange[Coming soon]")
 
-        col1, col2, col3, col4 = st.columns([1,1,1,1])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-        col3.image(Image.open("images\logo_edit.png"))
-        col4.image(Image.open("images\logo_edit.png"))
-
-        col1, col2 = st.columns([1,2.025])
-        col1.image(Image.open("images\logo_edit.png"))
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
-      
-        col1, col2 = st.columns([1.12,1])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-      
     elif img == "images\logo_edit_3.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-
-        col1, col2 = st.columns([2.285,1])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-
-        col1, col2, col3 = st.columns([1.05,1,1])
-        col1.image(Image.open("images\logo_edit.png"))
-        col2.image(Image.open("images\logo_edit.png"))
-        col3.image(Image.open("images\logo_edit.png"))
+        st.warning("⚠️⠀:orange[Coming soon]")
 
     elif img == "images\logo_edit_4.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        
-        col1, col2 = st.columns([1,1])
-        col1.image(Image.open("images\logo_edit.png"), use_column_width=True)
-        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
-        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
+        st.warning("⚠️⠀:orange[Coming soon]")
 
     elif img == "images\logo_edit_5.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
-
+        st.warning("⚠️⠀:orange[Coming soon]")
+       
     elif img == "images\logo_edit_6.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-
-        col1, col2 = st.columns([1.54,1])
-        with col1:
-            col1.image(Image.open("images\logo_edit.png"))
-            col_1, col_2 = st.columns([1.12,1])
-            col_1.image(Image.open("images\logo_edit.png"))
-            col_2.image(Image.open("images\logo_edit.png"))
-
-        with col2:
-            st.image(Image.open("images\logo_edit.png"))
-            st.image(Image.open("images\logo_edit.png"))
-            st.image(Image.open("images\logo_edit.png"))
-       
+        st.warning("⚠️⠀:orange[Coming soon]")
+    
     elif img == "images\logo_edit_7.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        
-        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
-        col1, col2 = st.columns([1.18,1])
-        col1.image(Image.open("images\logo_edit.png"), use_column_width=True)
-        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
+        st.warning("⚠️⠀:orange[Coming soon]")
 
 
 elif st.session_state['index_page'] >= 2:
