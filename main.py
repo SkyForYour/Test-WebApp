@@ -40,6 +40,7 @@ st.session_state['language'] = st_toggle_switch(
     track_color="#29B5E8",  # optional
 )
 
+st.image('images\logo_edit.png', use_column_width=True)
 # -----> Image : HTML To Streamlit
 def get_img_as_base64(file):
     st.write(file)
