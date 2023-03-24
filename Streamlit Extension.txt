@@ -1,4 +1,1 @@
-pip install streamlit-toggle-switch
-pip install streamlit-image-comparison
-pip install streamlit-image-select
-pip install opencv-python
+
