@@ -1,5 +1,6 @@
 streamlit
-streamlit_toggle
+streamlit-toggle
+streamlit-toggle-switch
 streamlit-image-comparison
 streamlit-image-select
 streamlit_folium
