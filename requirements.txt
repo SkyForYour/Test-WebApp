@@ -1,8 +1,10 @@
 streamlit
+streamlit_toggle
 streamlit-image-comparison
-streamlit-toggle-switch
 streamlit-image-select
+streamlit_folium
+
 opencv-python
 pillow
 Image
-
+BytesIO
