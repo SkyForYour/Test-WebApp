@@ -54,13 +54,7 @@ def get_img_as_base64(file):
 # img4 = get_img_as_base64("images\d4.jpg")
 # img5 = get_img_as_base64("images\d5.jpg")
 
-img_1 = Image.open("images/logo_edit_1.png")
-img_2 = Image.open("images/logo_edit_2.png")
-img_3 = Image.open("images/logo_edit_3.png")
-img_4 = Image.open("images/logo_edit_4.png")
-img_5 = Image.open("images/logo_edit_5.png")
-img_6 = Image.open("images/logo_edit_6.png")
-img_7 = Image.open("images/logo_edit_7.png")
+
 
 # --------------------> Sidebar
 with st.sidebar:
