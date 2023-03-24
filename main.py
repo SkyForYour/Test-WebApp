@@ -159,7 +159,10 @@ if st.session_state['index_page'] == 0:
 
 
 elif st.session_state['index_page']== 1:
-
+    
+    Image.open("images/")
+    
+    
     img = image_select(
     label="",
     images=[
