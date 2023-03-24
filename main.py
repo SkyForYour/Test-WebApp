@@ -163,13 +163,13 @@ elif st.session_state['index_page']== 1:
     img = image_select(
     label="",
     images=[
-        "images/topic_1.jpg",
-        "images/topic_2.jpg",
-        "images/topic_3.png",
-        "images/topic_4.jpg",
-        "images/topic_5.png",
-        "images/topic_6.jpg",
-        "images/topic_7.png",
+        "images\logo_edit_1.png",
+        "images\logo_edit_2.png",
+        "images\logo_edit_3.png",
+        "images\logo_edit_4.png",
+        "images\logo_edit_5.png",
+        "images\logo_edit_6.png",
+        "images\logo_edit_7.png",
     ],
     captions=["ท่าเรือบ้านเชี่ยวหลาน", "จุดชมวิวเขื่อนรัชชประภา", "สะพานแขวน ภูเขารูปหัวใจ", 
               "วัดไกรสรเขตราราม", "ลานพระแท่น ภปร.สก.", "ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน", 
@@ -177,89 +177,89 @@ elif st.session_state['index_page']== 1:
             use_container_width=True, index=0
     )
 
-    if img == "images/topic_1.jpg":
+    if img == "images\logo_edit_1.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
 
         col1, col2 = st.columns([2.04,1])
-        col1.image(Image.open("images/t_1_1.jpg"))
-        col2.image(Image.open("images/t_1_2.jpg"))
-        col2.image(Image.open("images/t_1_3.jpg"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
 
         col1, col2 = st.columns([1,1.18])
-        col1.image(Image.open("images/t_1_4.jpg"))
-        col2.image(Image.open("images/t_1_5.jpg"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
     
-    elif img == "images/topic_2.jpg":
+    elif img == "images\logo_edit_2.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
 
         col1, col2, col3, col4 = st.columns([1,1,1,1])
-        col1.image(Image.open("images/t_2_6.jpg"))
-        col2.image(Image.open("images/t_2_7.jpg"))
-        col3.image(Image.open("images/t_2_8.jpg"))
-        col4.image(Image.open("images/t_2_9.jpg"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
+        col3.image(Image.open("images\logo_edit.png"))
+        col4.image(Image.open("images\logo_edit.png"))
 
         col1, col2 = st.columns([1,2.025])
-        col1.image(Image.open("images/t_2_5.jpg"))
-        col1.image(Image.open("images/t_2_3.jpg"))
-        col2.image(Image.open("images/t_2_1.jpg"), use_column_width=True)
+        col1.image(Image.open("images\logo_edit.png"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
       
         col1, col2 = st.columns([1.12,1])
-        col1.image(Image.open("images/t_2_4.jpg"))
-        col2.image(Image.open("images/t_2_2.jpg"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
       
-    elif img == "images/topic_3.png":
+    elif img == "images\logo_edit_3.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
 
         col1, col2 = st.columns([2.285,1])
-        col1.image(Image.open("images/t_3_3.jpg"))
-        col2.image(Image.open("images/t_3_1.jpg"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
 
         col1, col2, col3 = st.columns([1.05,1,1])
-        col1.image(Image.open("images/t_3_2.jpg"))
-        col2.image(Image.open("images/t_3_4.png"))
-        col3.image(Image.open("images/t_3_5.png"))
+        col1.image(Image.open("images\logo_edit.png"))
+        col2.image(Image.open("images\logo_edit.png"))
+        col3.image(Image.open("images\logo_edit.png"))
 
-    elif img == "images/topic_4.jpg":
+    elif img == "images\logo_edit_4.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         
         col1, col2 = st.columns([1,1])
-        col1.image(Image.open("images/t_4_1.jpg"), use_column_width=True)
-        col2.image(Image.open("images/t_4_2.jpg"), use_column_width=True)
-        st.image(Image.open("images/t_4_3.png"), use_column_width=True)
+        col1.image(Image.open("images\logo_edit.png"), use_column_width=True)
+        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
+        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
 
-    elif img == "images/topic_5.png":
+    elif img == "images\logo_edit_5.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.image(Image.open("images/t_5_1.png"), use_column_width=True)
+        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
 
-    elif img == "images/topic_6.jpg":
+    elif img == "images\logo_edit_6.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
 
         col1, col2 = st.columns([1.54,1])
         with col1:
-            col1.image(Image.open("images/t_6_1.jpg"))
+            col1.image(Image.open("images\logo_edit.png"))
             col_1, col_2 = st.columns([1.12,1])
-            col_1.image(Image.open("images/t_6_3.jpg"))
-            col_2.image(Image.open("images/t_6_4.jpg"))
+            col_1.image(Image.open("images\logo_edit.png"))
+            col_2.image(Image.open("images\logo_edit.png"))
 
         with col2:
-            st.image(Image.open("images/t_6_6.jpg"))
-            st.image(Image.open("images/t_6_5.jpg"))
-            st.image(Image.open("images/t_6_2.jpg"))
+            st.image(Image.open("images\logo_edit.png"))
+            st.image(Image.open("images\logo_edit.png"))
+            st.image(Image.open("images\logo_edit.png"))
        
-    elif img == "images/topic_7.png":
+    elif img == "images\logo_edit_7.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         
-        st.image(Image.open("images/t_7_2.png"), use_column_width=True)
+        st.image(Image.open("images\logo_edit.png"), use_column_width=True)
         col1, col2 = st.columns([1.18,1])
-        col1.image(Image.open("images/t_7_1.png"), use_column_width=True)
-        col2.image(Image.open("images/t_7_3.png"), use_column_width=True)
+        col1.image(Image.open("images\logo_edit.png"), use_column_width=True)
+        col2.image(Image.open("images\logo_edit.png"), use_column_width=True)
 
 
 elif st.session_state['index_page'] >= 2:
