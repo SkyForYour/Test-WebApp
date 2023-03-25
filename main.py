@@ -73,92 +73,92 @@ if st.session_state['index_page'] == 0:
     # make_responsive=True,
     # )
 
-    # html = f"""
-    # <!DOCTYPE html>
-    # <html>
-    # <head>
-    #     <style>
-    #         body {{
-    #             margin: 0;
-    #         }}
+    html = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {{
+                margin: 0;
+            }}
 
-    #         .slider {{
-    #             overflow: hidden;
-    #             width: 100vw;
-    #             height: 100vh;
-    #             position: relative;
-    #         }}
+            .slider {{
+                overflow: hidden;
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+            }}
 
-    #         .slider .slide {{
-    #             position: absolute;
-    #             top: 0;
-    #             left: 0;
-    #             width: 100%;
-    #             height: 100%;
-    #             border-radius: 10px;
-    #             background-size: cover;
-    #             background-position: center;
-    #             animation: slide 15s infinite;
-    #         }}
+            .slider .slide {{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background-size: cover;
+                background-position: center;
+                animation: slide 15s infinite;
+            }}
 
-    #         .slider .slide:nth-child(1) {{
-    #             background-image: url("data:image/png;base64,{img1}");
+            .slider .slide:nth-child(1) {{
+                background-image: url("data:image/png;base64,{img1}");
                 
-    #             animation-delay: -0;
-    #         }}
+                animation-delay: -0;
+            }}
 
-    #         .slider .slide:nth-child(2) {{
-    #             background-image: url("data:image/png;base64,{img2}");
-    #             animation-delay: -3s;
-    #         }}
+            .slider .slide:nth-child(2) {{
+                background-image: url("data:image/png;base64,{img2}");
+                animation-delay: -3s;
+            }}
             
-    #         .slider .slide:nth-child(3) {{
-    #             background-image: url("data:image/png;base64,{img3}");
-    #             animation-delay: -6s;
-    #         }}
+            .slider .slide:nth-child(3) {{
+                background-image: url("data:image/png;base64,{img3}");
+                animation-delay: -6s;
+            }}
             
-    #         .slider .slide:nth-child(4) {{
-    #             background-image: url("data:image/png;base64,{img4}");
-    #             animation-delay: -9s;
-    #         }}
+            .slider .slide:nth-child(4) {{
+                background-image: url("data:image/png;base64,{img4}");
+                animation-delay: -9s;
+            }}
 
-    #         .slider .slide:nth-child(5) {{
-    #             background-image: url("data:image/png;base64,{img5}");
-    #             animation-delay: -12s;
-    #         }}
+            .slider .slide:nth-child(5) {{
+                background-image: url("data:image/png;base64,{img5}");
+                animation-delay: -12s;
+            }}
 
-    #         @keyframes slide {{
-    #             0%, 15%, 100% {{
-    #                 transform: translateX(0);
-    #                 animation-timing-function: ease;
-    #             }}
-    #             20% {{
-    #                 transform: translateX(-100%);
-    #                 animation-timing-function: step-end;
-    #             }}
-    #             95% {{
-    #                 transform: translateX(100%);
-    #                 animation-timing-function: ease;
-    #             }}
-    #         }}
-    #     </style>
-    # </head>
-    #     <body>
-    #         <div class="slider">
-    #             <div class="slide"></div>
-    #             <div class="slide"></div>
-    #             <div class="slide"></div>
-    #             <div class="slide"></div>
-    #             <div class="slide"></div>
-    #         <div>
-    #     </body>
-    # </html> 
+            @keyframes slide {{
+                0%, 15%, 100% {{
+                    transform: translateX(0);
+                    animation-timing-function: ease;
+                }}
+                20% {{
+                    transform: translateX(-100%);
+                    animation-timing-function: step-end;
+                }}
+                95% {{
+                    transform: translateX(100%);
+                    animation-timing-function: ease;
+                }}
+            }}
+        </style>
+    </head>
+        <body>
+            <div class="slider">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+            <div>
+        </body>
+    </html> 
 
-    # """
-    # components.html(html, height=800, scrolling=False)
+    """
+    components.html(html, height=800, scrolling=False)
 
-    logo = Image.open("images/logo_edit.png")
-    st.image(logo, use_column_width=True)
+    # logo = Image.open("images/logo_edit.png")
+    # st.image(logo, use_column_width=True)
 
 
 elif st.session_state['index_page']== 1:
