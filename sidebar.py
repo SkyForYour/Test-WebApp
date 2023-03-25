@@ -24,7 +24,7 @@ def App():
         color: #454545;
         cursor: pointer;
         display: inline-block;
-        padding: 15px 10%;
+        padding: 15px 23%;
         text-align: center;
         transition: all 250ms;
         border: 1;
@@ -44,11 +44,11 @@ def App():
         </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
         
-        if st.button("**⠀⠀⠀⠀⠀⠀⠀⠀⠀ ชุมชน ⠀⠀⠀⠀⠀⠀⠀⠀⠀**"):
+        if st.button("**ชุมชนบ้านเชี่ยวหลาน**"):
             st.session_state['index_page'] = 0
-        if st.button("**⠀ ⠀ ⠀ แนะนำแหล่งท่องเที่ยว** ⠀ ⠀ ⠀"):
+        if st.button("**แนะนำแหล่งท่องเที่ยว**"):
             st.session_state['index_page'] = 1
-        if st.button("**⠀ ⠀ ⠀โปรแกรมการท่องเที่ยว⠀ ⠀ ⠀**"):
+        if st.button("**โปรแกรมการท่องเที่ยว**"):
             st.session_state['index_page'] = 2
 
         if st.session_state['index_page'] == 2:
@@ -74,7 +74,7 @@ def App():
         color: #454545;
         cursor: pointer;
         display: inline-block;
-        padding: 15px 15.8%;
+        padding: 15px 18.5%;
         text-align: center;
         transition: all 250ms;
         border: 1;
@@ -94,11 +94,11 @@ def App():
         </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
 
-        if st.button("**⠀⠀⠀ ⠀ ⠀ Community ⠀ ⠀ ⠀⠀⠀**"):
+        if st.button("**Ban Chiew Lan Community**"):
             st.session_state['index_page'] = 0
-        if st.button("**⠀Recommended attractions⠀**"):
+        if st.button("**Recommended attractions**"):
             st.session_state['index_page'] = 1
-        if st.button("**⠀⠀⠀ ⠀ Travel Program ⠀ ⠀⠀⠀**"):
+        if st.button("**Cheow Lan Travel Program**"):
             st.session_state['index_page'] = 2
         
         if st.session_state['index_page'] == 2:
