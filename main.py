@@ -58,9 +58,10 @@ img5 = get_img_as_base64("images/d5.jpg")
 with st.sidebar:
     sidebar.App()
 
-if st.session_state['index_page'] == 0:
+st.header("🌏 ตัวอย่างเว็บแอพ :blue[(Web App Demo)]")
+st.caption("\-⠀**แนะนำกลุ่มชุมชนบ้านเชี่ยวหลาน** / **แนะนำแหล่งท่องเที่ยว** / **แนะนำโปรแกรมการท่องเที่ยว**")
 
-    st.title("🌏 ตัวอย่าง (DEMO)")
+if st.session_state['index_page'] == 0:
 
     # ----------> ขนานไม่ดี
     # image_comparison(
@@ -74,148 +75,153 @@ if st.session_state['index_page'] == 0:
     # make_responsive=True,
     # )
 
+    st.info('')
     html = f"""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            body {{
-                margin: 0;
-            }}
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body {{
+                    margin: 0;
+                }}
 
-            .slider {{
-                overflow: hidden;
-                width: 100vw;
-                height: 100vh;
-                position: relative;
-            }}
+                .slider {{
+                    overflow: hidden;
+                    width: 100vw;
+                    height: 100vh;
+                    position: relative;
+                }}
 
-            .slider .slide {{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                background-size: cover;
-                background-position: center;
-                animation: slide 15s infinite;
-            }}
+                .slider .slide {{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-size: cover;
+                    background-position: center;
+                    animation: slide 15s infinite;
+                }}
 
-            .slider .slide:nth-child(1) {{
-                background-image: url("data:image/png;base64,{img1}");
+                .slider .slide:nth-child(1) {{
+                    background-image: url("data:image/png;base64,{img1}");
+                    
+                    animation-delay: -0;
+                }}
+
+                .slider .slide:nth-child(2) {{
+                    background-image: url("data:image/png;base64,{img2}");
+                    animation-delay: -3s;
+                }}
                 
-                animation-delay: -0;
-            }}
-
-            .slider .slide:nth-child(2) {{
-                background-image: url("data:image/png;base64,{img2}");
-                animation-delay: -3s;
-            }}
-            
-            .slider .slide:nth-child(3) {{
-                background-image: url("data:image/png;base64,{img3}");
-                animation-delay: -6s;
-            }}
-            
-            .slider .slide:nth-child(4) {{
-                background-image: url("data:image/png;base64,{img4}");
-                animation-delay: -9s;
-            }}
-
-            .slider .slide:nth-child(5) {{
-                background-image: url("data:image/png;base64,{img5}");
-                animation-delay: -12s;
-            }}
-
-            @keyframes slide {{
-                0%, 15%, 100% {{
-                    transform: translateX(0);
-                    animation-timing-function: ease;
+                .slider .slide:nth-child(3) {{
+                    background-image: url("data:image/png;base64,{img3}");
+                    animation-delay: -6s;
                 }}
-                20% {{
-                    transform: translateX(-100%);
-                    animation-timing-function: step-end;
+                
+                .slider .slide:nth-child(4) {{
+                    background-image: url("data:image/png;base64,{img4}");
+                    animation-delay: -9s;
                 }}
-                95% {{
-                    transform: translateX(100%);
-                    animation-timing-function: ease;
+
+                .slider .slide:nth-child(5) {{
+                    background-image: url("data:image/png;base64,{img5}");
+                    animation-delay: -12s;
                 }}
-            }}
-        </style>
-    </head>
-        <body>
-            <div class="slider">
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
-            <div>
-        </body>
-    </html> 
 
-    """
-    components.html(html, height=600, scrolling=False)
+                @keyframes slide {{
+                    0%, 15%, 100% {{
+                        transform: translateX(0);
+                        animation-timing-function: ease;
+                    }}
+                    20% {{
+                        transform: translateX(-100%);
+                        animation-timing-function: step-end;
+                    }}
+                    95% {{
+                        transform: translateX(100%);
+                        animation-timing-function: ease;
+                    }}
+                }}
+            </style>
+        </head>
+            <body>
+                <div class="slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                <div>
+            </body>
+        </html> 
 
-    # logo = Image.open("images/logo_edit.png")
-    # st.image(logo, use_column_width=True)
+        """
+    components.html(html, height=630, scrolling=False)
+    st.info('')
 
+    st.header('📌 หัวข้อเนื้อหา')
+    st.caption('\-⠀รายละเอียดย่อย')
+    st.markdown("- เนื้อหาข้อมูลต่าง ๆ⠀.⠀.⠀.")
+    st.markdown("- เนื้อหาข้อมูลต่าง ๆ⠀.⠀.⠀.")
+    st.markdown("- เนื้อหาข้อมูลต่าง ๆ⠀.⠀.⠀.")
 
 elif st.session_state['index_page']== 1:
 
+    st.info('')
     img = image_select(
     label="",
     images=[
-        "images/logo_edit_1.png",
-        "images/logo_edit_2.png",
-        "images/logo_edit_3.png",
-        "images/logo_edit_4.png",
-        "images/logo_edit_5.png",
-        "images/logo_edit_6.png",
-        "images/logo_edit_7.png",
+        "images/topic_1.jpg",
+        "images/topic_2.jpg",
+        "images/topic_3.png",
+        "images/topic_4.jpg",
+        "images/topic_5.png",
+        "images/topic_6.jpg",
+        "images/topic_7.png",
     ],
     captions=["ท่าเรือบ้านเชี่ยวหลาน", "จุดชมวิวเขื่อนรัชชประภา", "สะพานแขวน ภูเขารูปหัวใจ", 
               "วัดไกรสรเขตราราม", "ลานพระแท่น ภปร.สก.", "ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน", 
               "บ้านพอเพียง เชี่ยวหลาน"],
             use_container_width=True, index=0
     )
-
+ 
     if img == "images/logo_edit_1.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
+       
       
     elif img == "images/logo_edit_2.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
+        
 
     elif img == "images/logo_edit_3.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
-
+     
     elif img == "images/logo_edit_4.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
+        
 
     elif img == "images/logo_edit_5.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
+        
        
     elif img == "images/logo_edit_6.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
-        st.warning("⚠️⠀:orange[Coming soon]")
+   
     
     elif img == "images/logo_edit_7.png":
         # CSS : Image
         st.markdown("""<style>img { border-radius: 20px;}</style>""", unsafe_allow_html=True)
         st.warning("⚠️⠀:orange[Coming soon]")
-
+    
+    st.info('')
 
 elif st.session_state['index_page'] >= 2:
 
@@ -237,7 +243,6 @@ elif st.session_state['index_page'] >= 2:
     # folium.Marker([8.975542176892585, 98.84371586146968], icon=folium.Icon(color="cadetblue"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
     # # ----------> ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน
     # folium.Marker([8.977097444759261, 98.84369485026102], icon=folium.Icon(color="gray"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
-
 
     # center on Liberty Bell, add marker
     map = folium.Map(location=[8.969686369678994, 98.82382392883302],zoom_start=14, control_scale=True)
@@ -271,10 +276,13 @@ elif st.session_state['index_page'] >= 2:
         folium.Marker([8.975542176892585, 98.84371586146968], icon=folium.Icon(color="cadetblue"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
         # ----------> ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน
         folium.Marker([8.977097444759261, 98.84369485026102], icon=folium.Icon(color="gray"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
-    
-    else:
-        st.warning("⚠️⠀:orange[Coming soon]")
 
-    # call to render Folium map in Streamlit
-    map_data = st_folium(map, width='auto', returned_objects="last_object_clicked")
-    
+    if st.session_state['trip'] != "อื่น ๆ⠀.⠀." and st.session_state['trip'] != "Other⠀.⠀.":
+        # call to render Folium map in Streamlit
+        map_data = st_folium(map, width='auto', returned_objects="last_object_clicked")
+    else:
+        st.warning("""
+        # ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⚠️ 
+        ## ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ :orange[-⠀Coming soon⠀-]
+        ⠀
+        """)
