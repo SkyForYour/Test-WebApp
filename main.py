@@ -60,8 +60,8 @@ with st.sidebar:
 
 if st.session_state['index_page'] == 0:
 
-    st.title("🌏⠀ตัวอย่าง (DEMO)")
-    
+    st.title("🌏 ตัวอย่าง (DEMO)")
+
     # ----------> ขนานไม่ดี
     # image_comparison(
     # img1="images/index_1.jpg",
