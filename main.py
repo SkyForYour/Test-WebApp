@@ -60,7 +60,7 @@ with st.sidebar:
 
 if st.session_state['index_page'] == 0:
 
-    st.success("Example : Test")
+    st.success("(DEMO) ตัวอย่างเว็บแอป 🌏")
     # ----------> ขนานไม่ดี
     # image_comparison(
     # img1="images/index_1.jpg",
