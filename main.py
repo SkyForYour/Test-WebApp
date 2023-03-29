@@ -60,6 +60,7 @@ with st.sidebar:
 
 if st.session_state['index_page'] == 0:
 
+    st.title("(DEMO) ตัวอย่างเว็บแอป 🌏")
     st.success("(DEMO) ตัวอย่างเว็บแอป 🌏")
     # ----------> ขนานไม่ดี
     # image_comparison(
@@ -155,7 +156,7 @@ if st.session_state['index_page'] == 0:
     </html> 
 
     """
-    components.html(html, height=800, scrolling=False)
+    components.html(html, height=600, scrolling=False)
 
     # logo = Image.open("images/logo_edit.png")
     # st.image(logo, use_column_width=True)
