@@ -242,11 +242,8 @@ elif st.session_state['index_page'] >= 2:
     map = folium.Map(location=[8.969686369678994, 98.82382392883302],zoom_start=14, control_scale=True)
     Draw(export=True).add_to(map)
 
-    if st.session_state['trip'] == "1 วันไปกลับ" or st.session_state['trip'] == "1 day round trip":
-        # ----------> บ้านเชี่ยวหลาน
-        folium.Marker([8.978925364564146, 98.82449785474496], icon=folium.Icon(color="red"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
-    
-    elif st.session_state['trip'] == "2 วัน 1 คืน" or st.session_state['trip'] == "2 days 1 night":
+    if st.session_state['trip'] == "ทริปวันเดียว" or st.session_state['trip'] == "One Day Trip":
+
         # ----------> บ้านเชี่ยวหลาน
         folium.Marker([8.978925364564146, 98.82449785474496], icon=folium.Icon(color="red"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
         # ----------> ท่าเรือเทศบาลตำบลบ้านเชี่ยวหลาน
@@ -258,7 +255,7 @@ elif st.session_state['index_page'] >= 2:
         # ----------> ศูนย์ศิลปาชีพบ้านเชี่ยวหลาน
         folium.Marker([8.977097444759261, 98.84369485026102], icon=folium.Icon(color="gray"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
     
-    elif st.session_state['trip'] == "3 วัน 2 คืน" or st.session_state['trip'] == "3 days 2 nights":
+    elif st.session_state['trip'] == "ทริปสองวัน" or st.session_state['trip'] == "Two Day Trip":
         # ----------> บ้านเชี่ยวหลาน
         folium.Marker([8.978925364564146, 98.82449785474496], icon=folium.Icon(color="red"), popup="Thailand", tooltip="ตำแหน่ง").add_to(map)
         # ----------> ท่าเรือเทศบาลตำบลบ้านเชี่ยวหลาน
