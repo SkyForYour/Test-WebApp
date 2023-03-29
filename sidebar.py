@@ -55,7 +55,7 @@ def App():
             st.write('')
             st.session_state['trip'] = st.selectbox(
             ' 🚍⠀เลือกทริปการท่องเที่ยว',
-            ('1 วันไปกลับ', '2 วัน 1 คืน', "3 วัน 2 คืน", 'อื่น ๆ⠀.⠀.'))
+            ('ทริปวันเดียว', 'ทริปสองวัน', 'อื่น ๆ⠀.⠀.'))
             
     elif st.session_state['language'] == 1:
 
@@ -105,7 +105,7 @@ def App():
             st.write('')
             st.session_state['trip'] = st.selectbox(
             ' 🚍⠀Choose a trip',
-            ('1 day round trip', '2 days 1 night', "3 days 2 nights", 'Other⠀.⠀.'))
+            ('One Day Trip', 'Two Day Trip', 'Other⠀.⠀.'))
             
     st.write(''), st.write('')
     col1, col2 = st.columns(2)
