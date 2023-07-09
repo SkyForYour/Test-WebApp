@@ -50,21 +50,27 @@ def GPX(file):
     # ave_lon = sum(p[1] for p in points)/len(points)
     return points
 
-img1 = get_img_as_base64("images/into/I1.jpg")
-img2 = get_img_as_base64("images/into/I2.jpg")
-img3 = get_img_as_base64("images/into/I3.JPG")
-img4 = get_img_as_base64("images/into/I4.jpg")
-img5 = get_img_as_base64("images/into/I5.jpg")
-img6 = get_img_as_base64("images/into/I6.JPG")
-img7 = get_img_as_base64("images/into/I7.JPG")
-img8 = get_img_as_base64("images/into/I8.JPG")
-img9 = get_img_as_base64("images/into/I9.jpg")
-img10 = get_img_as_base64("images/into/I10.JPG")
-img11 = get_img_as_base64("images/into/I11.JPG")
-img12 = get_img_as_base64("images/into/I12.jpg")
-img13 = get_img_as_base64("images/into/I12.jpg")
-img14 = get_img_as_base64("images/into/I14.jpg")
-img15 = get_img_as_base64("images/into/I15.jpg")
+img1 = get_img_as_base64("images/d1.jpg")
+img2 = get_img_as_base64("images/d2.jpg")
+img3 = get_img_as_base64("images/d3.jpg")
+img4 = get_img_as_base64("images/d4.jpg")
+img5 = get_img_as_base64("images/d5.jpg")
+
+# img1 = get_img_as_base64("images/into/I1.jpg")
+# img2 = get_img_as_base64("images/into/I2.jpg")
+# img3 = get_img_as_base64("images/into/I3.JPG")
+# img4 = get_img_as_base64("images/into/I4.jpg")
+# img5 = get_img_as_base64("images/into/I5.jpg")
+# img6 = get_img_as_base64("images/into/I6.JPG")
+# img7 = get_img_as_base64("images/into/I7.JPG")
+# img8 = get_img_as_base64("images/into/I8.JPG")
+# img9 = get_img_as_base64("images/into/I9.jpg")
+# img10 = get_img_as_base64("images/into/I10.JPG")
+# img11 = get_img_as_base64("images/into/I11.JPG")
+# img12 = get_img_as_base64("images/into/I12.jpg")
+# img13 = get_img_as_base64("images/into/I12.jpg")
+# img14 = get_img_as_base64("images/into/I14.jpg")
+# img15 = get_img_as_base64("images/into/I15.jpg")
 
 # -----> Sidebar
 with st.sidebar:
@@ -75,293 +81,376 @@ if st.session_state['index_page'] == 0:
     st.header("🌏 บ้านเชี่ยวหลาน :blue[(Web App Demo)]")
     
     html = f"""
-        <style>
-            body{{
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }}
-
-            .slider{{
-                width: 800px;
-                height: 500px;
-                border-radius: 10px;
-                overflow: hidden;
-            }}
-
-            .slides{{
-                width: 500%;
-                height: 500px;
-                display: flex;
-
-            }}
-
-            .slides input{{
-                display: none;
-            }}
-
-            .slide{{
-                width: 20%;
-                transition: 2s;
-            }}
-
-            .slide img{{
-                width: 800px;
-                height: 500px;
-            }}
-
-            .navigation-mannual{{
-                position: absolute;
-                width: 800px;
-                margin-top: -40px;
-                display: flex;
-                justify-content: center;
-            }}
-
-            .mannual-btn{{
-                border: 2px solid #ccc;
-                padding: 5px;
-                border-radius: 10px;
-                cursor: pointer;
-                transition: 1s;
-            }}
-
-            .mannual-btn:not(:last-child){{
-                margin-right: 40px;
-            }}
-            .mannual-btn:hover{{
-                background-color: #ccc;
-            }}
-            #radio1:checked ~ .first{{
-                margin-left: 0;
-            }}
-            #radio2:checked ~ .first{{
-                margin-left: -20%;
-            }}
-            #radio3:checked ~ .first{{
-                margin-left: -40%;
-            }}
-            #radio4:checked ~ .first{{
-                margin-left: -60%;
-            }}
-            #radio5:checked ~ .first{{
-                margin-left: -80%;
-            }}
-            #radio6:checked ~ .first{{
-                margin-left: -100%;
-            }}
-            #radio7:checked ~ .first{{
-                margin-left: -120%;
-            }}
-            #radio8:checked ~ .first{{
-                margin-left: -140%;
-            }}
-            #radio9:checked ~ .first{{
-                margin-left: -160%;
-            }}
-            #radio10:checked ~ .first{{
-                margin-left: -180%;
-            }}
-            #radio11:checked ~ .first{{
-                margin-left: -200%;
-            }}
-            #radio12:checked ~ .first{{
-                margin-left: -220%;
-            }}
-            #radio13:checked ~ .first{{
-                margin-left: -240%;
-            }}
-            #radio14:checked ~ .first{{
-                margin-left: -260%;
-            }}
-            #radio15:checked ~ .first{{
-                margin-left: -280%;
-            }}
-
-            .navigation-auto{{
-                position: absolute;
-                display: flex;
-                width: 800px;
-                justify-content: center;
-                margin-top: 460px;
-            }}
-
-            .navigation-auto div{{
-                border: 2px solid #333;
-                padding: 5px;
-                border-radius: 10px;
-                transition: 1s;
-            }}
-
-            .navigation-auto div:not(:last-child){{
-                margin-right: 40px;
-            }}
-
-            #radio1:checked ~.navigation-auto .auto-btn-1{{
-                background: #ccc;
-            }}
-            #radio2:checked ~.navigation-auto .auto-btn-2{{
-                background: #ccc;
-            }}
-            #radio3:checked ~.navigation-auto .auto-btn-3{{
-                background: #ccc;
-            }}
-            #radio4:checked ~.navigation-auto .auto-btn-4{{
-                background: #ccc;
-            }}
-            #radio5:checked ~.navigation-auto .auto-btn-5{{
-                background: #ccc;
-            }}
-            #radio6:checked ~.navigation-auto .auto-btn-6{{
-                background: #ccc;
-            }}
-            #radio7:checked ~.navigation-auto .auto-btn-7{{
-                background: #ccc;
-            }}
-            #radio8:checked ~.navigation-auto .auto-btn-8{{
-                background: #ccc;
-            }}
-            #radio9:checked ~.navigation-auto .auto-btn-9{{
-                background: #ccc;
-            }}
-            #radio10:checked ~.navigation-auto .auto-btn-01{{
-                background: #ccc;
-            }}
-            #radio11:checked ~.navigation-auto .auto-btn-11{{
-                background: #ccc;
-            }}
-            #radio12:checked ~.navigation-auto .auto-btn-12{{
-                background: #ccc;
-            }}
-            #radio13:checked ~.navigation-auto .auto-btn-13{{
-                background: #ccc;
-            }}
-            #radio14:checked ~.navigation-auto .auto-btn-14{{
-                background: #ccc;
-            }}
-            #radio15:checked ~.navigation-auto .auto-btn-15{{
-                background: #ccc;
-            }}
-
-        </style>
-
-        <body>
-        <div class="slider">
-            <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5">
-            <input type="radio" name="radio-btn" id="radio6">
-            <input type="radio" name="radio-btn" id="radio7">
-            <input type="radio" name="radio-btn" id="radio8">
-            <input type="radio" name="radio-btn" id="radio9">
-            <input type="radio" name="radio-btn" id="radio10">
-            <input type="radio" name="radio-btn" id="radio11">
-            <input type="radio" name="radio-btn" id="radio12">
-            <input type="radio" name="radio-btn" id="radio13">
-            <input type="radio" name="radio-btn" id="radio14">
-            <input type="radio" name="radio-btn" id="radio15">
-
-            <div class="slide first">
-                <img src="data:image/png;base64,{img1}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img2}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img3}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img4}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img5}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img6}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img7}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img8}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img9}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img10}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img11}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img12}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img13}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img14}" alt="">
-            </div>
-            <div class="slide">
-                <img src="data:image/png;base64,{img15}" alt="">
-            </div>
-                <div class="navigation-auto">
-                    <div class="auto-btn-1"></div>
-                    <div class="auto-btn-2"></div>
-                    <div class="auto-btn-3"></div>
-                    <div class="auto-btn-4"></div>
-                    <div class="auto-btn-5"></div>
-                    <div class="auto-btn-6"></div>
-                    <div class="auto-btn-7"></div>
-                    <div class="auto-btn-8"></div>
-                    <div class="auto-btn-9"></div>
-                    <div class="auto-btn-10"></div>
-                    <div class="auto-btn-11"></div>
-                    <div class="auto-btn-12"></div>
-                    <div class="auto-btn-13"></div>
-                    <div class="auto-btn-14"></div>
-                    <div class="auto-btn-15"></div>
-                </div>
-            </div>
-
-            <div class="navigation-mannual">
-                <label for="radio1" class="mannual-btn"></label>
-                <label for="radio2" class="mannual-btn"></label>
-                <label for="radio3" class="mannual-btn"></label>
-                <label for="radio4" class="mannual-btn"></label>
-                <label for="radio5" class="mannual-btn"></label>
-                <label for="radio6" class="mannual-btn"></label>
-                <label for="radio7" class="mannual-btn"></label>
-                <label for="radio8" class="mannual-btn"></label>
-                <label for="radio9" class="mannual-btn"></label>
-                <label for="radio10" class="mannual-btn"></label>
-                <label for="radio11" class="mannual-btn"></label>
-                <label for="radio12" class="mannual-btn"></label>
-                <label for="radio13" class="mannual-btn"></label>
-                <label for="radio14" class="mannual-btn"></label>
-                <label for="radio15" class="mannual-btn"></label>
-            </div>
-        </div>
-
-        <script>
-            var counter = 1;
-            setInterval(function()  {{
-                document.getElementById('radio'+ counter).checked = true;
-                counter++; 
-                if(counter>15){{
-                    counter=1
+        <html>
+        <head>
+            <style>
+                body {{
+                    margin: 0;
                 }}
-            }}, 5000);
-        </script>
-        </body>
+
+                .slider {{
+                    overflow: hidden;
+                    width: 100vw;
+                    height: 100vh;
+                    position: relative;
+                }}
+
+                .slider .slide {{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background-size: cover;
+                    background-position: center;
+                    animation: slide 15s infinite;
+                }}
+
+                .slider .slide:nth-child(1) {{
+                    background-image: url("data:image/png;base64,{img1}");
+                    
+                    animation-delay: -0;
+                }}
+
+                .slider .slide:nth-child(2) {{
+                    background-image: url("data:image/png;base64,{img2}");
+                    animation-delay: -3s;
+                }}
+                
+                .slider .slide:nth-child(3) {{
+                    background-image: url("data:image/png;base64,{img3}");
+                    animation-delay: -6s;
+                }}
+                
+                .slider .slide:nth-child(4) {{
+                    background-image: url("data:image/png;base64,{img4}");
+                    animation-delay: -9s;
+                }}
+
+                .slider .slide:nth-child(5) {{
+                    background-image: url("data:image/png;base64,{img5}");
+                    animation-delay: -12s;
+                }}
+
+                @keyframes slide {{
+                    0%, 15%, 100% {{
+                        transform: translateX(0);
+                        animation-timing-function: ease;
+                    }}
+                    20% {{
+                        transform: translateX(-100%);
+                        animation-timing-function: step-end;
+                    }}
+                    95% {{
+                        transform: translateX(100%);
+                        animation-timing-function: ease;
+                    }}
+                }}
+            </style>
+        </head>
+            <body>
+                <div class="slider">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                <div>
+            </body>
+        </html> 
+
         """
-    components.html(html, height=500, scrolling=False)
+    components.html(html, height=630, scrolling=False)
+  
+    # html = f"""
+    #     <style>
+    #         body{{
+    #             margin: 0;
+    #             padding: 0;
+    #             display: flex;
+    #             justify-content: center;
+    #             align-items: center;
+    #         }}
+
+    #         .slider{{
+    #             width: 800px;
+    #             height: 500px;
+    #             border-radius: 10px;
+    #             overflow: hidden;
+    #         }}
+
+    #         .slides{{
+    #             width: 500%;
+    #             height: 500px;
+    #             display: flex;
+
+    #         }}
+
+    #         .slides input{{
+    #             display: none;
+    #         }}
+
+    #         .slide{{
+    #             width: 20%;
+    #             transition: 2s;
+    #         }}
+
+    #         .slide img{{
+    #             width: 800px;
+    #             height: 500px;
+    #         }}
+
+    #         .navigation-mannual{{
+    #             position: absolute;
+    #             width: 800px;
+    #             margin-top: -40px;
+    #             display: flex;
+    #             justify-content: center;
+    #         }}
+
+    #         .mannual-btn{{
+    #             border: 2px solid #ccc;
+    #             padding: 5px;
+    #             border-radius: 10px;
+    #             cursor: pointer;
+    #             transition: 1s;
+    #         }}
+
+    #         .mannual-btn:not(:last-child){{
+    #             margin-right: 40px;
+    #         }}
+    #         .mannual-btn:hover{{
+    #             background-color: #ccc;
+    #         }}
+    #         #radio1:checked ~ .first{{
+    #             margin-left: 0;
+    #         }}
+    #         #radio2:checked ~ .first{{
+    #             margin-left: -20%;
+    #         }}
+    #         #radio3:checked ~ .first{{
+    #             margin-left: -40%;
+    #         }}
+    #         #radio4:checked ~ .first{{
+    #             margin-left: -60%;
+    #         }}
+    #         #radio5:checked ~ .first{{
+    #             margin-left: -80%;
+    #         }}
+    #         #radio6:checked ~ .first{{
+    #             margin-left: -100%;
+    #         }}
+    #         #radio7:checked ~ .first{{
+    #             margin-left: -120%;
+    #         }}
+    #         #radio8:checked ~ .first{{
+    #             margin-left: -140%;
+    #         }}
+    #         #radio9:checked ~ .first{{
+    #             margin-left: -160%;
+    #         }}
+    #         #radio10:checked ~ .first{{
+    #             margin-left: -180%;
+    #         }}
+    #         #radio11:checked ~ .first{{
+    #             margin-left: -200%;
+    #         }}
+    #         #radio12:checked ~ .first{{
+    #             margin-left: -220%;
+    #         }}
+    #         #radio13:checked ~ .first{{
+    #             margin-left: -240%;
+    #         }}
+    #         #radio14:checked ~ .first{{
+    #             margin-left: -260%;
+    #         }}
+    #         #radio15:checked ~ .first{{
+    #             margin-left: -280%;
+    #         }}
+
+    #         .navigation-auto{{
+    #             position: absolute;
+    #             display: flex;
+    #             width: 800px;
+    #             justify-content: center;
+    #             margin-top: 460px;
+    #         }}
+
+    #         .navigation-auto div{{
+    #             border: 2px solid #333;
+    #             padding: 5px;
+    #             border-radius: 10px;
+    #             transition: 1s;
+    #         }}
+
+    #         .navigation-auto div:not(:last-child){{
+    #             margin-right: 40px;
+    #         }}
+
+    #         #radio1:checked ~.navigation-auto .auto-btn-1{{
+    #             background: #ccc;
+    #         }}
+    #         #radio2:checked ~.navigation-auto .auto-btn-2{{
+    #             background: #ccc;
+    #         }}
+    #         #radio3:checked ~.navigation-auto .auto-btn-3{{
+    #             background: #ccc;
+    #         }}
+    #         #radio4:checked ~.navigation-auto .auto-btn-4{{
+    #             background: #ccc;
+    #         }}
+    #         #radio5:checked ~.navigation-auto .auto-btn-5{{
+    #             background: #ccc;
+    #         }}
+    #         #radio6:checked ~.navigation-auto .auto-btn-6{{
+    #             background: #ccc;
+    #         }}
+    #         #radio7:checked ~.navigation-auto .auto-btn-7{{
+    #             background: #ccc;
+    #         }}
+    #         #radio8:checked ~.navigation-auto .auto-btn-8{{
+    #             background: #ccc;
+    #         }}
+    #         #radio9:checked ~.navigation-auto .auto-btn-9{{
+    #             background: #ccc;
+    #         }}
+    #         #radio10:checked ~.navigation-auto .auto-btn-01{{
+    #             background: #ccc;
+    #         }}
+    #         #radio11:checked ~.navigation-auto .auto-btn-11{{
+    #             background: #ccc;
+    #         }}
+    #         #radio12:checked ~.navigation-auto .auto-btn-12{{
+    #             background: #ccc;
+    #         }}
+    #         #radio13:checked ~.navigation-auto .auto-btn-13{{
+    #             background: #ccc;
+    #         }}
+    #         #radio14:checked ~.navigation-auto .auto-btn-14{{
+    #             background: #ccc;
+    #         }}
+    #         #radio15:checked ~.navigation-auto .auto-btn-15{{
+    #             background: #ccc;
+    #         }}
+
+    #     </style>
+
+    #     <body>
+    #     <div class="slider">
+    #         <div class="slides">
+    #         <input type="radio" name="radio-btn" id="radio1">
+    #         <input type="radio" name="radio-btn" id="radio2">
+    #         <input type="radio" name="radio-btn" id="radio3">
+    #         <input type="radio" name="radio-btn" id="radio4">
+    #         <input type="radio" name="radio-btn" id="radio5">
+    #         <input type="radio" name="radio-btn" id="radio6">
+    #         <input type="radio" name="radio-btn" id="radio7">
+    #         <input type="radio" name="radio-btn" id="radio8">
+    #         <input type="radio" name="radio-btn" id="radio9">
+    #         <input type="radio" name="radio-btn" id="radio10">
+    #         <input type="radio" name="radio-btn" id="radio11">
+    #         <input type="radio" name="radio-btn" id="radio12">
+    #         <input type="radio" name="radio-btn" id="radio13">
+    #         <input type="radio" name="radio-btn" id="radio14">
+    #         <input type="radio" name="radio-btn" id="radio15">
+
+    #         <div class="slide first">
+    #             <img src="data:image/png;base64,{img1}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img2}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img3}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img4}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img5}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img6}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img7}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img8}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img9}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img10}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img11}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img12}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img13}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img14}" alt="">
+    #         </div>
+    #         <div class="slide">
+    #             <img src="data:image/png;base64,{img15}" alt="">
+    #         </div>
+    #             <div class="navigation-auto">
+    #                 <div class="auto-btn-1"></div>
+    #                 <div class="auto-btn-2"></div>
+    #                 <div class="auto-btn-3"></div>
+    #                 <div class="auto-btn-4"></div>
+    #                 <div class="auto-btn-5"></div>
+    #                 <div class="auto-btn-6"></div>
+    #                 <div class="auto-btn-7"></div>
+    #                 <div class="auto-btn-8"></div>
+    #                 <div class="auto-btn-9"></div>
+    #                 <div class="auto-btn-10"></div>
+    #                 <div class="auto-btn-11"></div>
+    #                 <div class="auto-btn-12"></div>
+    #                 <div class="auto-btn-13"></div>
+    #                 <div class="auto-btn-14"></div>
+    #                 <div class="auto-btn-15"></div>
+    #             </div>
+    #         </div>
+
+    #         <div class="navigation-mannual">
+    #             <label for="radio1" class="mannual-btn"></label>
+    #             <label for="radio2" class="mannual-btn"></label>
+    #             <label for="radio3" class="mannual-btn"></label>
+    #             <label for="radio4" class="mannual-btn"></label>
+    #             <label for="radio5" class="mannual-btn"></label>
+    #             <label for="radio6" class="mannual-btn"></label>
+    #             <label for="radio7" class="mannual-btn"></label>
+    #             <label for="radio8" class="mannual-btn"></label>
+    #             <label for="radio9" class="mannual-btn"></label>
+    #             <label for="radio10" class="mannual-btn"></label>
+    #             <label for="radio11" class="mannual-btn"></label>
+    #             <label for="radio12" class="mannual-btn"></label>
+    #             <label for="radio13" class="mannual-btn"></label>
+    #             <label for="radio14" class="mannual-btn"></label>
+    #             <label for="radio15" class="mannual-btn"></label>
+    #         </div>
+    #     </div>
+
+    #     <script>
+    #         var counter = 1;
+    #         setInterval(function()  {{
+    #             document.getElementById('radio'+ counter).checked = true;
+    #             counter++; 
+    #             if(counter>15){{
+    #                 counter=1
+    #             }}
+    #         }}, 5000);
+    #     </script>
+    #     </body>
+    #     """
+    # components.html(html, height=500, scrolling=False)
 
     st.header('📌 หัวข้อเนื้อหา')
     st.caption("\-⠀**แนะนำกลุ่มชุมชนบ้านเชี่ยวหลาน** / **แนะนำแหล่งท่องเที่ยว** / **แนะนำโปรแกรมการท่องเที่ยว**")
