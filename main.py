@@ -51,10 +51,10 @@ def GPX(file):
     return points
 
 img1 = get_img_as_base64("images/into/I1.JPG")
-img2 = get_img_as_base64("images/d2.jpg")
-img3 = get_img_as_base64("images/d3.jpg")
-img4 = get_img_as_base64("images/d4.jpg")
-img5 = get_img_as_base64("images/d5.jpg")
+img2 = get_img_as_base64("images/into/I2.JPG")
+img3 = get_img_as_base64("images/into/I3.JPG")
+img4 = get_img_as_base64("images/into/I4.JPG")
+img5 = get_img_as_base64("images/into/I5.JPG")
 
 # img1 = get_img_as_base64("images/into/I1.jpg")
 # img2 = get_img_as_base64("images/into/I2.jpg")
