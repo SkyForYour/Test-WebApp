@@ -50,7 +50,7 @@ def GPX(file):
     # ave_lon = sum(p[1] for p in points)/len(points)
     return points
 
-img1 = get_img_as_base64("images/d1.jpg")
+img1 = get_img_as_base64("images/into/I1.JPG")
 img2 = get_img_as_base64("images/d2.jpg")
 img3 = get_img_as_base64("images/d3.jpg")
 img4 = get_img_as_base64("images/d4.jpg")
