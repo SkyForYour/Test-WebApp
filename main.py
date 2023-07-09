@@ -50,6 +50,22 @@ def GPX(file):
     # ave_lon = sum(p[1] for p in points)/len(points)
     return points
 
+img1 = get_img_as_base64("images/into/I1.jpg")
+img2 = get_img_as_base64("images/into/I2.jpg")
+img3 = get_img_as_base64("images/into/I3.JPG")
+img4 = get_img_as_base64("images/into/I4.jpg")
+img5 = get_img_as_base64("images/into/I5.jpg")
+img6 = get_img_as_base64("images/into/I6.JPG")
+img7 = get_img_as_base64("images/into/I7.JPG")
+img8 = get_img_as_base64("images/into/I8.JPG")
+img9 = get_img_as_base64("images/into/I9.jpg")
+img10 = get_img_as_base64("images/into/I10.JPG")
+img11 = get_img_as_base64("images/into/I11.JPG")
+img12 = get_img_as_base64("images/into/I12.jpg")
+img13 = get_img_as_base64("images/into/I12.jpg")
+img14 = get_img_as_base64("images/into/I14.jpg")
+img15 = get_img_as_base64("images/into/I15.jpg")
+
 # -----> Sidebar
 with st.sidebar:
     sidebar.App()
@@ -57,23 +73,6 @@ with st.sidebar:
 if st.session_state['index_page'] == 0:
     
     st.header("🌏 บ้านเชี่ยวหลาน :blue[(Web App Demo)]")
-
-    img1 = get_img_as_base64("images/into/I1.jpg")
-    img2 = get_img_as_base64("images/into/I2.jpg")
-    img3 = get_img_as_base64("images/into/I3.JPG")
-    img4 = get_img_as_base64("images/into/I4.jpg")
-    img5 = get_img_as_base64("images/into/I5.jpg")
-    img6 = get_img_as_base64("images/into/I6.JPG")
-    img7 = get_img_as_base64("images/into/I7.JPG")
-    img8 = get_img_as_base64("images/into/I8.JPG")
-    img9 = get_img_as_base64("images/into/I9.jpg")
-    img10 = get_img_as_base64("images/into/I10.JPG")
-    img11 = get_img_as_base64("images/into/I11.JPG")
-    img12 = get_img_as_base64("images/into/I12.jpg")
-    img13 = get_img_as_base64("images/into/I12.jpg")
-    img14 = get_img_as_base64("images/into/I14.jpg")
-    img15 = get_img_as_base64("images/into/I15.jpg")
-    
     
     html = f"""
         <style>
