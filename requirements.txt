@@ -1,7 +1,6 @@
 streamlit
-streamlit-toggle-switch
-streamlit-image-comparison
 streamlit-image-select
+streamlit-toggle-switch
 streamlit_folium
 
 opencv-python

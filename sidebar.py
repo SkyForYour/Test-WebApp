@@ -1,18 +1,35 @@
+import base64
+import os
+
+from PIL import Image 
+from io import BytesIO
+
 import streamlit as st
+
+from streamlit_toggle import st_toggle_switch
 from PIL import Image
-# from streamlit_toggle import st_toggle_switch
 
 def App():
 
-    logo = Image.open("images/logo_edit.png")
-    st.image(logo, use_column_width=True)
+    if 'language' not in st.session_state: 
+        st.session_state['language'] = 0
+
+    # -----> Thai / English
+    st.session_state['language'] = st_toggle_switch(
+        label="ภาษาไทย / ภาษาอังกฤษ", key="switch_1",
+        default_value=False, label_after=True,
+        inactive_color="#D3D3D3",  active_color="#11567f", track_color="#29B5E8",  
+    )
+    
+    col1, col2, col3 = st.columns([0.1,0.8,0.1])
+    col2.image((Image.open("images/logo_edit.png")), width=230)
 
     if st.session_state['language'] == 0:
         
-        st.markdown("## ⠀⠀:green[ยินดีต้อนรับสู่บ้านเชี่ยวหลาน]⠀⠀")
         # -----> HTML + CSS
         css_button = """<style>
             .stButton > button {
+            width: 100%;
             background-color: #E8F8F5;
             border-radius: 100px;
             box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
@@ -44,25 +61,24 @@ def App():
             </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
         
-        if st.button("**ชุมชนบ้านเชี่ยวหลาน**"):
+        if st.button("ชุมชนบ้านเชี่ยวหลาน"):
             st.session_state['index_page'] = 0
-        if st.button("**แนะนำแหล่งท่องเที่ยว**"):
+        if st.button("แนะนำแหล่งท่องเที่ยว"):
             st.session_state['index_page'] = 1
-        if st.button("**โปรแกรมการท่องเที่ยว**"):
+        if st.button("โปรแกรมการท่องเที่ยว"):
             st.session_state['index_page'] = 2
 
         if st.session_state['index_page'] == 2:
-            st.write('')
+
             st.session_state['trip'] = st.selectbox(
-            ' 🚍⠀เลือกทริปการท่องเที่ยว',
-            ('ทริปวันเดียว', 'ทริปสองวัน', 'อื่น ๆ⠀.⠀.'))
+            ' 🚍⠀เลือกทริปการท่องเที่ยว',('ทริปครึ่งเดียว', 'ทริปหนึ่งวัน'))
             
     elif st.session_state['language'] == 1:
 
-        st.markdown("## ⠀⠀:green[Welcome to Baan Cheow Lan]⠀⠀")    
         # -----> HTML + CSS
         css_button = """<style>
             .stButton > button {
+            width: 100%;
             background-color: #E8F8F5;
             border-radius: 100px;
             box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
@@ -94,29 +110,15 @@ def App():
             </style>"""
         st.markdown(css_button, unsafe_allow_html=True)
 
-        if st.button("**Ban Chiew Lan Community**"):
+        if st.button("Ban Chiew Lan Community"):
             st.session_state['index_page'] = 0
-        if st.button("**Recommended attractions**"):
+        if st.button("Recommended attractions"):
             st.session_state['index_page'] = 1
-        if st.button("**Cheow Lan Travel Program**"):
+        if st.button("Cheow Lan Travel Program"):
             st.session_state['index_page'] = 2
         
         if st.session_state['index_page'] == 2:
-            st.write('')
             st.session_state['trip'] = st.selectbox(
-            ' 🚍⠀Choose a trip',
-            ('One Day Trip', 'Two Day Trip', 'Other⠀.⠀.'))
+            ' 🚍⠀Choose a trip',('Half Day Trip', 'One Day Trip'))
             
-    st.write(''), st.write('')
-    # col1, col2 = st.columns(2)
-    # with col1:
     st.caption("### ⠀:green[─────────⠀**Streamlit**⠀─────────]⠀")
-
-    # with col2:
-    #     st.session_state['language'] = st_toggle_switch(
-    #         label="𝐓𝐇𝐀𝐈 / 𝐄𝐍𝐆", key="switch_1",
-    #         default_value=False, label_after=False,
-    #         inactive_color="#D3D3D3",  # optional
-    #         active_color="#11567f",  # optional
-    #         track_color="#29B5E8",  # optional
-    #     )
